@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Adding Custom ODK Widget"
+title: "Some Useful Bash Commands"
 date: 2016-03-9
 ---
 
