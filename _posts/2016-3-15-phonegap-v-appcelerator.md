@@ -23,7 +23,7 @@ Phone gap provides a wrapper around the native webview functionality provided in
 * Debug on your browser - because PhoneGap apps are written in HTML/CSS/JSS, you can test and debug right in your browser
 
 ## Weaknesses
-The main weakness is that PhoneGaps success at delivering a native-like experience depends on the power of the OS's web-rendering engine. WebView in Android definitely comes with its challenges challenges.[^webView_challenges]
+The main weakness is that PhoneGaps success at delivering a native-like experience depends on the power of the OS's web-rendering engine. WebView in Android definitely comes with its challenges.[^webView_challenges]
 
 # Appcelerator
 Appcelerator takes JavaScript source code and uses the v8 engine to call native UI elements/ other features at runtime. The developer only writes code in JS and can create views in Alloy, Appcelerator's MVC framework. 
