@@ -36,7 +36,7 @@ navbar-links:
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Some Person
+  name: Ethan Keller
   email: "ethan.keller@gmail.com"
   facebook: ethan.keller.50  # eg. daattali
   github: ethan92429    # eg. daattali
