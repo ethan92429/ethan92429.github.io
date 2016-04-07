@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Some Useful Bash Commands"
-date: 2016-03-9
 ---
 
 I decided to learn some bash so that I could automate the process of deploying our app to a given server. 
