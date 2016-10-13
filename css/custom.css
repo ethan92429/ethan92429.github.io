@@ -1,1 +1,20 @@
 /*Custom palett: http://paletton.com/#uid=12P0u0kllllaFw0g0qFqFg0w0aF*/
+
+/*PHOTOS*/
+
+/*For overlaying text on photos*/
+.absolute-text{
+	position:absolute; 
+	bottom:0; 
+/*	background:rgba(251,251,251,0.5);
+*/	padding:5px 10px; 
+	width:100%; 
+	text-align:center;
+	color:white;
+	margin:5px;
+}
+.relative{
+	position:relative; 
+	margin:10px;
+	/*width:600px;*/
+}

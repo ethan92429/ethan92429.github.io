@@ -1,0 +1,11 @@
+<!-- Pass in a picture url and a caption. Example call is : 
+	{% comment %}
+	{% include functions/overlayed-text-picture.html picture="https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg" caption="I'm a cat"%} 
+	{% endcomment %}
+    I want to let this funtion take in multiple photos as well...
+-->
+
+<div class="relative">
+	<img src="{{include.picture}}">
+	<p class="absolute-text">{{include.caption}}</p>
+</div>
