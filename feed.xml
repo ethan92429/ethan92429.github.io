@@ -1,24 +1,100 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:20 %}
+    <title>Ethan Keller</title>
+    <description>Just a little bit of everything</description>
+    <link>http://ethan92429.github.io</link>
+    <atom:link href="http://ethan92429.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
+        <title>Observations from the backseat of a white Mitsubishi 2002 half-ton pickup on drives between Las Vegas and Tegucigalpa, Honduras</title>
         <description>
-          {% if post.subtitle %}{{ post.subtitle | xml_escape }} - {% endif %}
-          {{ post.content | strip_html | xml_escape | truncatewords: 50 }}
+          
+          Two vendors smile in the heat, and offer green mangoes with hot sauce. Last night we saw a performer gulp gasoline and blow fire. The word is coming over a static radio criticizing the president for an illegal third term. Plants lining the street shake with growth The Municipal buildings...
         </description>
-        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <link>{{ site.url }}{{ post.url }}</link>
-        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        <pubDate>Wed, 07 Sep 2016 00:00:00 -0400</pubDate>
+        <link>http://ethan92429.github.io/2016-09-07-pickup_truck_poems/</link>
+        <guid isPermaLink="true">http://ethan92429.github.io/2016-09-07-pickup_truck_poems/</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Five weeks of teaching AguaClara theory at Las Vegas</title>
+        <description>
+          
+          We have just finished the theory component of operator training in Las Vegas, Honduras. Five weeks of classes Tuesday through Friday. We have covered plant components, water systems, basic math and unit conversions. We’ve taken two field trips. And we’ve been building the flocculator baffles, plate settlers in the sedimentation...
+        </description>
+        <pubDate>Wed, 07 Sep 2016 00:00:00 -0400</pubDate>
+        <link>http://ethan92429.github.io/2016-09-07-five_weeks_of_trainings_in_las_vegas/</link>
+        <guid isPermaLink="true">http://ethan92429.github.io/2016-09-07-five_weeks_of_trainings_in_las_vegas/</guid>
+      </item>
+    
+      <item>
+        <title>Musings from the first week of Las Vegas plant operator trainings</title>
+        <description>
+          
+          We just finished the first week of operator training in Las Vegas and we are driving back to Tegucigalpa, five of us in the white half-ton mitsubishi. In front of me sits German (pronounced Hair-mon), wearing a yellow shirt and a 1/2” haircut. He sports a fantastically round belly. He...
+        </description>
+        <pubDate>Tue, 09 Aug 2016 00:00:00 -0400</pubDate>
+        <link>http://ethan92429.github.io/2016-08-09-musings_las_vegas_trainings/</link>
+        <guid isPermaLink="true">http://ethan92429.github.io/2016-08-09-musings_las_vegas_trainings/</guid>
+      </item>
+    
+      <item>
+        <title>Las Vegas, Mountain Biking, Clear Cutting and United Airlines Bag Claim</title>
+        <description>
+          
+          Hello friends and family! Here’s my first blog post. It was written in a pickup on the way from Las Vegas, Honduras to Tegucigalpa. I hope life is going well in the States. By the end of today I will have been in Honduras for one week. I flew into...
+        </description>
+        <pubDate>Sat, 16 Jul 2016 00:00:00 -0400</pubDate>
+        <link>http://ethan92429.github.io/2016-07-16-las_vegas_mountain_biking_clear-cutting_and_the_united_airlines_bag_claim/</link>
+        <guid isPermaLink="true">http://ethan92429.github.io/2016-07-16-las_vegas_mountain_biking_clear-cutting_and_the_united_airlines_bag_claim/</guid>
+      </item>
+    
+      <item>
+        <title>Phonegap or Appcelerator</title>
+        <description>
+          
+          I am building a data visualization app for water treatment plant operators in Honduras. I want to build it based on the html/css/js code that already exists so I decided to use either appcelerator or phonegap. I have no connections to either one, so here is an unbiased analysis explaining...
+        </description>
+        <pubDate>Tue, 15 Mar 2016 00:00:00 -0400</pubDate>
+        <link>http://ethan92429.github.io/2016-03-15-phonegap-v-appcelerator/</link>
+        <guid isPermaLink="true">http://ethan92429.github.io/2016-03-15-phonegap-v-appcelerator/</guid>
+      </item>
+    
+      <item>
+        <title>Launched this Jekyll Site on Github Pages</title>
+        <description>
+          
+          I started with the skeleton code included with this very handy demo. If you like what you see, feel free to use any part of this. Here is the source code.
+
+        </description>
+        <pubDate>Fri, 29 Jan 2016 00:00:00 -0500</pubDate>
+        <link>http://ethan92429.github.io/2016-01-29-ethan-keller-site-launched/</link>
+        <guid isPermaLink="true">http://ethan92429.github.io/2016-01-29-ethan-keller-site-launched/</guid>
+      </item>
+    
+      <item>
+        <title>Learning How to Turn Bowls</title>
+        <description>
+          
+          Over winter break I decided to fire up the Midi Lathe and turn a few bowls for some friends. Here are the results:
+   
+        </description>
+        <pubDate>Tue, 19 Jan 2016 00:00:00 -0500</pubDate>
+        <link>http://ethan92429.github.io/2016-01-19-turning-bowls/</link>
+        <guid isPermaLink="true">http://ethan92429.github.io/2016-01-19-turning-bowls/</guid>
+      </item>
+    
+      <item>
+        <title>First Day in Haiti</title>
+        <description>
+          
+          The crew woke up at 5AM to fly out of Fort Lauderdale. We stayed in a Rodeway Inn, the cheapest hotel available in Miami, but with surprisingly comfortable mattresses. The hotel was tacky in everything from the gift store to the landscaping. We were groggy when we stumbled into the...
+        </description>
+        <pubDate>Sun, 05 Jan 2014 00:00:00 -0500</pubDate>
+        <link>http://ethan92429.github.io/2014-01-05-first_day_in_haiti/</link>
+        <guid isPermaLink="true">http://ethan92429.github.io/2014-01-05-first_day_in_haiti/</guid>
+      </item>
+    
   </channel>
 </rss>

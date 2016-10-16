@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Phonegap or Appcelerator</title>
+
+  <meta name="author" content="Ethan Keller" />
+  
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Ethan Keller - Just a little bit of everything" href="/feed.xml" />
+
+  
+    
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+    
+      
+  
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+      <link rel="stylesheet" href="/css/custom.css" />
+    
+    
+  
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+    
+  
+  
+
+  
+
+  <!-- Facebook OpenGraph tags -->
+  <meta property="og:title" content="Phonegap or Appcelerator" />
+  <meta property="og:type" content="website" />
+  
+  <meta property="og:url" content="http://ethan92429.github.io/2016-03-15-phonegap-v-appcelerator/" />
+  
+  
+  <meta property="og:image" content="http://ethan92429.github.io/img/avatar-icon.png" />
+  
+  
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@ethan92492" />
+  <meta name="twitter:creator" content="@ethan92492" />
+  <meta name="twitter:title" content="Phonegap or Appcelerator" />
+  <meta name="twitter:description" content="I am building a data visualization app for water treatment plant operators in Honduras. I want to build it based on the html/css/js code that already exists so I decided to use either appcelerator or phonegap. I have no connections to either one, so here is an unbiased analysis explaining..." />
+  
+  <meta name="twitter:image" content="http://ethan92429.github.io/img/avatar-icon.png" />
+  
+  
+</head>
+
+
+  <body>
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://ethan92429.github.io">Ethan Keller</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="/">Home</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="/aboutme">About Me</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="/tag/honduras">Honduras</a>
+
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+	    <a href="http://ethan92429.github.io ">
+	      <img class="avatar-img" src="/img/avatar-icon.png" />
+		</a>
+	  </div>
+	</div>
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>Phonegap or Appcelerator</h1>
+		  
+		  
+		  
+		  <span class="post-meta">Posted on March 15, 2016</span>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+      <article role="main" class="blog-post">
+        <p>I am building a data visualization app for water treatment plant operators in Honduras. I want to build it based on the html/css/js code that already exists so I decided to use either appcelerator or phonegap. I have no connections to either one, so here is an unbiased analysis explaining why I chose to use PhoneGap for an initial prototype.</p>
+
+<h1 id="the-big-picture-and-the-tldr">The Big Picture (and the TL;DR)</h1>
+<p>PhoneGap is a wrapper around the native application’s web rendering class, using the Cordova<sup id="fnref:cordova"><a href="#fn:cordova" class="footnote">1</a></sup> engine, much like Rhomobile. In contrast, Appcelerator is built from the ground up to run source js code in v8 to build native UI elements/ other native features, facilitating the use of OS-specific features. In conclusion, PhoneGap has less overhead, and most likely would get a fully fledged app out the door faster, whereas Appcelerator is one step closer to a native application, ensuring an experience much closer to that of a native app.</p>
+
+<h1 id="phonegap">PhoneGap</h1>
+
+<h2 id="how-phonegap-works">How PhoneGap Works</h2>
+<p>Phone gap provides a wrapper around the native webview functionality provided in both Android and iOS SDKs. That wrapper enables applications that are designed in HTML/CSS/JS to access features of the phone normally only available through the native SDK. This JS API PhoneGap provides is called the ‘bridge’ because it bridges native functionality with JS functionality. Examples of native calls include: toast messages, camera access, contacts acces, and other hardware access. In the API, you queue messages (API calls) to be sent over the bridge.</p>
+
+<p>“There is much more to PhoneGap than that, but the messaging from web view to native code via the bridge implementation is the key piece of technology which allows local web applications to call native code.”<sup id="fnref:appcelerator_comparison"><a href="#fn:appcelerator_comparison" class="footnote">2</a></sup></p>
+
+<h2 id="strengths">Strengths</h2>
+<ul>
+  <li>Light - the PhoneGap application does one thing and does it well.</li>
+  <li>Extendable - PhoneGap makes it easy to write plugins that extend the bridge API to additional functionality in your native OS</li>
+  <li>Easily deployable - You can deploy any HTML/CSS/JS application that already exists in minutes</li>
+  <li>Debug on your browser - because PhoneGap apps are written in HTML/CSS/JSS, you can test and debug right in your browser</li>
+</ul>
+
+<h2 id="weaknesses">Weaknesses</h2>
+<p>The main weakness is that PhoneGaps success at delivering a native-like experience depends on the power of the OS’s web-rendering engine. WebView in Android definitely comes with its challenges.<sup id="fnref:webView_challenges"><a href="#fn:webView_challenges" class="footnote">3</a></sup></p>
+
+<h1 id="appcelerator">Appcelerator</h1>
+<p>Appcelerator takes JavaScript source code and uses the v8 engine to call native UI elements/ other features at runtime. The developer only writes code in JS and can create views in Alloy, Appcelerator’s MVC framework.</p>
+
+<h2 id="strengths-1">Strengths</h2>
+<p>Appcelerator enables the creation of native applications in JS. And therefore the perks include all the abilities of a native application. As compared to PhoneGap, this means you can use native UI elements and easily access the phone’s hardware (although PhoneGap does include this, to some extent).</p>
+
+<h2 id="weaknesses-1">Weaknesses</h2>
+<p>Appcelerator requires writing an app that works specifically with the appcelerator API, whereas PhoneGap works directly with the CSS/HTML views you design. Therefore, a PhoneGap app can be created from an existing website in minutes.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>We are planning to use PhoneGap to build the initial prototype of our app because we already have a website, and thus building with PhoneGap should be a straightforward porting of our current website. However, if we see that the prototype is not working as ‘natively’ as we’d like, or some functionality we need is not supported in webview, we will reconsider moving the application to Appcelerator or some related platform. More blog posts following our progress will come soon.</p>
+
+<h1 id="sources">Sources</h1>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:cordova">
+      <p><a href="http://cordova.apache.org/">The Cordova Engine</a> <a href="#fnref:cordova" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:appcelerator_comparison">
+      <p><a href="http://www.appcelerator.com/blog/2012/05/comparing-titanium-and-phonegap/">Extremely detailed comparison of PhoneGap and Appcelerator</a> <a href="#fnref:appcelerator_comparison" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:webView_challenges">
+      <p><a href="http://simonmacdonald.blogspot.com/2012/02/android-issues-all-phonegap-developers.html">A list of common frustrations developers often have with webview</a> <a href="#fnref:webView_challenges" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+      </article>
+
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+
+  <!--- Share on Twitter -->
+  
+    <a href="https://twitter.com/intent/tweet?text=http://ethan92429.github.io/2016-03-15-phonegap-v-appcelerator/"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
+    </a>
+  
+
+  <!--- Share on Facebook -->
+  
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://ethan92429.github.io/2016-03-15-phonegap-v-appcelerator/"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
+    </a>
+  
+
+  <!--- Share on Google Plus -->
+  
+
+  <!--- Share on LinkedIn -->
+  
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://ethan92429.github.io/2016-03-15-phonegap-v-appcelerator/"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
+    </a>
+  
+
+</section>
+
+
+      
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="/2016-01-29-ethan-keller-site-launched/" data-toggle="tooltip" data-placement="top" title="Launched this Jekyll Site on Github Pages">&larr; Previous Post</a>
+        </li>
+        
+        
+        <li class="next">
+          <a href="/2016-07-16-las_vegas_mountain_biking_clear-cutting_and_the_united_airlines_bag_claim/" data-toggle="tooltip" data-placement="top" title="Las Vegas, Mountain Biking, Clear Cutting and United Airlines Bag Claim">Next Post &rarr;</a>
+        </li>
+        
+      </ul>
+
+      
+        <div class="disqus-comments">
+          
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+	    var disqus_shortname = 'ethankeller';
+	    /* ensure that pages with query string get the same discussion */
+            var url_parts = window.location.href.split("?");
+            var disqus_url = url_parts[0];	    
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          <li>
+            <a href="https://www.facebook.com/ethan.keller.50" title="Facebook">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/ethan92429" title="GitHub">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		  
+      
+		  
+          <li>
+            <a href="mailto:ethan.keller@gmail.com" title="Email me">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		  
+		  
+		  
+      
+      
+      
+      
+		  
+        </ul>
+        <p class="copyright text-muted">
+		  Ethan Keller
+		  &nbsp;&bull;&nbsp;
+		  2016
+
+		  
+		  &nbsp;&bull;&nbsp;
+		  <a href="http://ethan92429.github.io">ethan92429.github.io</a>
+		  
+	    </p>
+	        <!-- Please don't remove this, keep my open source work credited :) -->
+		<p class="theme-by text-muted">
+		  Theme by
+		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/main.js"></script>
+    
+  
+
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-74964948-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+
+  
+  </body>
+</html>
