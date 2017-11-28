@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Tutorial: Drawing AIDE Templates</title>
+
+  <meta name="author" content="Ethan Keller" />
+  
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Ethan Keller - Just a little bit of everything" href="/feed.xml" />
+
+  
+    
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+    
+      
+  
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+      <link rel="stylesheet" href="/css/custom.css" />
+    
+    
+  
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+    
+  
+  
+
+  
+
+  <!-- Facebook OpenGraph tags -->
+  <meta property="og:title" content="Tutorial: Drawing AIDE Templates" />
+  <meta property="og:type" content="website" />
+  
+  <meta property="og:url" content="http://ethan92429.github.io/2017-11-19-tutorial_drawing_templates/" />
+  
+  
+  <meta property="og:image" content="http://ethan92429.github.io/img/avatar-icon.png" />
+  
+  
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@ethan92492" />
+  <meta name="twitter:creator" content="@ethan92492" />
+  <meta name="twitter:title" content="Tutorial: Drawing AIDE Templates" />
+  <meta name="twitter:description" content="Learning Objectives Summary Time Required Pre-requisites “I Can…” Statements Building an AIDE Parametric Pipe Making an Assembly Folder Assembling an AIDE Assembly Copying Parts Into Your Folder Starting an Assembly design Making an Assembly design Parameter Name Scoping Learning Objectives Summary Templates in AIDE are Fusion design files that the..." />
+  
+  <meta name="twitter:image" content="http://ethan92429.github.io/img/avatar-icon.png" />
+  
+  
+</head>
+
+
+  <body>
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://ethan92429.github.io">Ethan Keller</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="/">Home</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="/aboutme">About Me</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="/tag/honduras">Honduras</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="/calendar">Calendar</a>
+
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+	    <a href="http://ethan92429.github.io ">
+	      <img class="avatar-img" src="/img/avatar-icon.png" />
+		</a>
+	  </div>
+	</div>
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div>
+        <div class="post-heading">
+          <h1>Tutorial: Drawing AIDE Templates</h1>
+		  
+		  
+		  
+		  <span class="post-meta">Posted on November 19, 2017</span>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div>
+
+      <article role="main" class="blog-post">
+        <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+<ul>
+  <li><a href="#learning-objectives">Learning Objectives</a>
+    <ul>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#time-required">Time Required</a></li>
+      <li><a href="#pre-requisites">Pre-requisites</a></li>
+      <li><a href="#i-can-statements">“I Can…” Statements</a></li>
+    </ul>
+  </li>
+  <li><a href="#building-an-aide-parametric-pipe">Building an AIDE Parametric Pipe</a>
+    <ul>
+      <li><a href="#making-an-assembly-folder">Making an Assembly Folder</a></li>
+    </ul>
+  </li>
+  <li><a href="#assembling-an-aide-assembly">Assembling an AIDE Assembly</a>
+    <ul>
+      <li><a href="#copying-parts-into-your-folder">Copying Parts Into Your Folder</a></li>
+      <li><a href="#starting-an-assembly-design">Starting an Assembly design</a></li>
+      <li><a href="#making-an-assembly-design">Making an Assembly design</a></li>
+      <li><a href="#parameter-name-scoping">Parameter Name Scoping</a></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- /TOC -->
+
+<h1 id="learning-objectives">Learning Objectives</h1>
+
+<h2 id="summary">Summary</h2>
+
+<p>Templates in AIDE are Fusion design files that the AIDE add-in can parametrize into various sizes and configurations. This tutorial provides a foundational understanding of how to design AIDE-compliant Fusion 360 templates. You’ll be designing a small network of pipes in the shape of your initials that can change size parametrically. You’ll build the pipe from scratch, and use pipe accessories from the shared component library. As you walk through the steps, you’ll see motivations for AIDE’s opinionated ways.</p>
+
+<h2 id="time-required">Time Required</h2>
+
+<p>This should take roughly 2-3 hours, but be sure to give yourself enough time to play!</p>
+
+<h2 id="pre-requisites">Pre-requisites</h2>
+
+<p>This tutorial assumes you have no CAD/Fusion 360 experience, and have just installed and played around with Fusion for a few hours.</p>
+
+<h2 id="i-can-statements">“I Can…” Statements</h2>
+
+<p>By the end of this tutorial, you should be able to say:</p>
+
+<ul>
+  <li>I can design a Fusion 360 model that AIDE can parametrize</li>
+  <li>I understand the difference between top-down and bottom-up CAD design and why AIDE uses the bottom-up approach</li>
+  <li>I can effectively use scoping and namespaces within designs</li>
+  <li>I understand why AIDE uses complex scoping</li>
+  <li>I can copy components into an assembly and joint them and pattern them as needed</li>
+</ul>
+
+<h1 id="building-an-aide-parametric-pipe">Building an AIDE Parametric Pipe</h1>
+
+<p>Now let’s build the first part, a pipe, and save it within your assembly folder. In the following video, I build a parametric AIDE pipe that we can use to make your initial. Make sure to first make the assembly folder, then follow along to make your own parametric pipe!</p>
+
+<h2 id="making-an-assembly-folder">Making an Assembly Folder</h2>
+
+<p>To begin putting together your assembly, you need to start copying the various components you would like to use into your folder on the Team Hub. For this tutorial, make a folder in aide_draw_tutorials/initial_pipe named [your name]_assembly. For instance, my assembly folder is aide_draw_tutorials/initial_pipe/ethank_assembly.</p>
+
+<iframe width="640" height="400" src="https://screencast.autodesk.com/Embed/Timeline/82d21ffa-8d56-4023-bb64-e909a61b03ac" frameborder="0" allowfullscreen="" webkitallowfullscreen=""></iframe>
+
+<p><strong>If you need a fitting that is not designed, feel free to design it and add it to the shared_component_library experimental folder.</strong></p>
+
+<h1 id="assembling-an-aide-assembly">Assembling an AIDE Assembly</h1>
+
+<p>Fusion supports two assembly styles (assemblies are design files full of different components), bottom-up and top-down. Top-down defines all the various components within one single assembly design. AIDE uses a bottom-up design, where each component is defined within a different design file, and then connected by joints into a single assembly design file. This enables AIDE to mix and match pieces easily and makes for a cleaner, more modular separation between the various components.</p>
+
+<h2 id="copying-parts-into-your-folder">Copying Parts Into Your Folder</h2>
+
+<p>It would take too long and be unnecessary for you to design all your own fittings, so luckily, we can reference fittings that have already been defined. Before you ever endeavor to design something, be sure to look online and in the Cornell Hub in order to check if the design already exists. Now copy the various fittings and pipes you need to make your letter into your assembly folder. If you use 3 elbows, you only need to copy the elbow design once into your folder. The only time you might copy the same component twice is if you had two unique parametrizations of the same component, for instance two pipes of different sizes/lengths.</p>
+
+<iframe width="640" height="620" src="https://screencast.autodesk.com/Embed/Timeline/fdf19bd5-8706-4b41-a9f0-f8e479e8c915" frameborder="0" allowfullscreen="" webkitallowfullscreen=""></iframe>
+
+<h2 id="starting-an-assembly-design">Starting an Assembly design</h2>
+
+<p>To work with AIDE, the assembly design needs to obey the following rules:</p>
+
+<ul>
+  <li>ONLY contains insert component, joint and pattern (circular or rectangular) features</li>
+  <li>ONLY contain components and bodies that are linked to design files within your assembly folder</li>
+  <li>All the features in the timeline need to follow this order: insert_component &gt; joint component &gt; pattern component. You can drag features around until the order is correct</li>
+</ul>
+
+<h2 id="making-an-assembly-design">Making an Assembly design</h2>
+
+<p>Now that your files are in the assembly folder, it’s time to start putting the assembly design together. In this design, you’ll be inserting the copied components, creating top-level parameters, joining the various components together, and adjusting components as needed. Follow along with the video to make your own letter!</p>
+
+<iframe width="640" height="400" src="https://screencast.autodesk.com/Embed/Timeline/85c72206-4183-47f3-a80f-07f703304065" frameborder="0" allowfullscreen="" webkitallowfullscreen=""></iframe>
+
+<h2 id="parameter-name-scoping">Parameter Name Scoping</h2>
+
+<p>One of AIDE’s main functions is to provide an elegant way to modify all the parameters within a given design. Without AIDE, you would have to go into every child design yourself, and change all the parameters to match one another. AIDE does this automatically by utilizing the same scoping rules as Python variables do. To understand what this means, consider the following example directory structure:
+* ethank_assembly design
+	- parameters:
+		- od: 3 in
+		- h: 2 m
+		- w: 1 m
+* ethank_assembly folder
+	- elbows
+	- tee
+	- horizontal pipe
+	- vertical pipe</p>
+
+<p>Because the ethank_assembly design and the ethank_assembly folder have the same name and are in the same folder, <strong>AIDE will automatically apply any changes to the ethank_assembly design parameters to the parameters with the same name in all the designs within the ethank_assembly folder.</strong> This means that if you set up your design correctly, AIDE will be able to change the size of all the pipes and fittings by simply changing the od at the ethank_assembly design level.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>AIDE, by connecting and modifying parameters to meet prescribed rules, can simplify the modification process and help with rapid design. However, AIDE also imposes strict rules on naming conventions and parameter creation. It is possible that these rules will help create standardized design standards that simplify design understanding.</p>
+
+<h1 id="survey">Survey</h1>
+
+<p><strong>Please fill out this anonymous survey once you have finished the tutorial so that we can make it better for future AIDE students!</strong></p>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeRiJBrs3wjCcgn__Ed4jhXheemeFBudydzXeT7XkE3YTvZjg/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          Tags:
+          
+          
+            <a href="/tag/aguaclara">aguaclara</a>
+          
+            <a href="/tag/aide">aide</a>
+          
+            <a href="/tag/tutorial">tutorial</a>
+          
+          
+        </div>
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+
+  <!--- Share on Twitter -->
+  
+    <a href="https://twitter.com/intent/tweet?text=http://ethan92429.github.io/2017-11-19-tutorial_drawing_templates/"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
+    </a>
+  
+
+  <!--- Share on Facebook -->
+  
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://ethan92429.github.io/2017-11-19-tutorial_drawing_templates/"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
+    </a>
+  
+
+  <!--- Share on Google Plus -->
+  
+
+  <!--- Share on LinkedIn -->
+  
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://ethan92429.github.io/2017-11-19-tutorial_drawing_templates/"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
+    </a>
+  
+
+</section>
+
+
+      
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="/2016-09-07-pickup_truck_poems/" data-toggle="tooltip" data-placement="top" title="Observations from the backseat of a white Mitsubishi 2002 half-ton pickup on drives between Las Vegas and Tegucigalpa, Honduras">&larr; Previous Post</a>
+        </li>
+        
+        
+      </ul>
+
+      
+        <div class="disqus-comments">
+          
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+	    var disqus_shortname = 'ethankeller';
+	    /* ensure that pages with query string get the same discussion */
+            var url_parts = window.location.href.split("?");
+            var disqus_url = url_parts[0];	    
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div>
+        <ul class="list-inline text-center footer-links">
+          
+          <li>
+            <a href="https://www.facebook.com/ethan.keller.50" title="Facebook">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/ethan92429" title="GitHub">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		  
+      
+		  
+          <li>
+            <a href="mailto:ethan.keller@gmail.com" title="Email me">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		  
+		  
+		  
+      
+      
+      
+      
+		  
+        </ul>
+        <p class="copyright text-muted">
+		  Ethan Keller
+		  &nbsp;&bull;&nbsp;
+		  2017
+
+		  
+		  &nbsp;&bull;&nbsp;
+		  <a href="http://ethan92429.github.io">ethan92429.github.io</a>
+		  
+	    </p>
+	        <!-- Please don't remove this, keep my open source work credited :) -->
+		<p class="theme-by text-muted">
+		  Theme by
+		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/main.js"></script>
+    
+  
+
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-74964948-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+
+  
+  </body>
+</html>
