@@ -50,7 +50,7 @@ author:
   twitter: ethan92492   # eg. daattali
   linkedin: in/ethanakeller  # eg. "pub/dean-attali/8/946/143"
   stackoverflow: 5136799/ethan-keller  # eg. "3943160/daattali"
- 
+
   google-plus: +EthanKeller92   # eg. +DeanAttali or 109424658772469020925
   xing: yourname      # eg. daattali
   snapchat: yourname  # eg. daattali
@@ -104,6 +104,8 @@ paginate: 5
 
 kramdown:
   input: GFM
+  # Enable auto-generated ID's for headings
+  auto_ids: true
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
