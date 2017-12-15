@@ -1,0 +1,15 @@
+{
+  "plant":{
+    "flocculator":{
+      "tank":{
+        "width": "15 cm"
+      }
+    },
+    "sedimentation":{
+      "plate settlers":{
+        "length": "1 m"
+      }
+    }
+  },
+  "hi":"5"
+}
